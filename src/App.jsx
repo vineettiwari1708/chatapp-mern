@@ -3,10 +3,15 @@ import {Route,Routes} from 'react-router-dom'
 import LoginPage from './pages/LoginPage'
 import HomePage from './pages/HomePage'
 import ProfilePage from './pages/ProfilePage'
+import assets from './assets/assets'
 
 const App = () => {
   return (
-    <div className="bg-[url('./src/assets/bgImage.svg')] bg-contain">
+   <div
+  className="w-screen h-screen bg-cover bg-center bg-no-repeat"
+  style={{ backgroundImage: `url(${assets.bgImage})` }}
+>
+
       <Routes>
           <Route path='/' element={<HomePage/>}/>
           <Route path='/login' element={<LoginPage/>}/>
